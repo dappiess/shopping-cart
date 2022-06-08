@@ -1,15 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <ViewHeader/>
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
+          <ProductList/>
+        </div>  
+        <div class="col-4">
+          <ViewCart />
+        </div>
+      </div>
+    
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ViewHeader from './components/ViewHeader';
+import ProductList from './components/ProductList.vue'
+import ViewCart from './components/ViewCart';
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+  ViewHeader,
+  ProductList,
+  ViewCart,
   }
 }
 </script>
@@ -21,6 +37,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
